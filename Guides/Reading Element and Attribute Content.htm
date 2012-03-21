@@ -1,0 +1,618 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- saved from url=(0062)http://msdn.microsoft.com/en-us/library/aa720458(v=vs.71).aspx -->
+<html xmlns="http://www.w3.org/1999/xhtml"><head id="ctl00_Head1" xmlns="http://www.w3.org/1999/xhtml"><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><link rel="stylesheet" type="text/css" href="./Reading Element and Attribute Content_files/Combined.css" xmlns="http://www.w3.org/1999/xhtml"><title>
+	
+  Reading Element and Attribute Content
+
+</title><meta name="DCS.dcsuri" content="/en-us/library/aa720458(d=lightweight,l=en-us,v=vs.71).aspx"><meta name="NormalizedUrl" content="http://msdn.microsoft.com/en-us/library/aa720458(d=lightweight,l=en-us,v=vs.71).aspx"><meta name="VotingContextUrl" content="http://msdn.microsoft.com/en-us/library/aa720458(d=lightweight,l=en-us,v=vs.71).aspx"><meta name="MN" content="74838605-7:54:19 AM"><meta name="Search.ShortId" content="aa720458"><meta name="Ms.Locale" content="en-us"><link rel="canonical" href="./Reading Element and Attribute Content_files/Reading Element and Attribute Content.htm" xmlns="http://www.w3.org/1999/xhtml"><link rel="alternate" media="print" href="http://msdn.microsoft.com/en-us/library/aa720458(d=printer,v=vs.71).aspx" xmlns="http://www.w3.org/1999/xhtml"><link rel="stylesheet" type="text/css" href="./Reading Element and Attribute Content_files/8e010b67ceb176b577f5afa1ceb6f5ad.css" media="print" title="printonly" xmlns="http://www.w3.org/1999/xhtml"><link type="text/css" rel="stylesheet" href="data:text/css,"></head>
+<body>
+
+   
+    <div class="MetricsContainer">
+    
+    <div class="WebtrendsContainer">
+      
+
+<script type="text/javascript" async="" src="./Reading Element and Attribute Content_files/ms2.js"></script><script type="text/javascript" language="javascript">
+//<![CDATA[
+  var literalNormalizedUrl = '/en-us/library/aa720458(d=lightweight,l=en-us,v=vs.71).aspx';
+  var wt_nvr_ru = 'WT_NVR_RU';
+  var wt_fpcdom = '.microsoft.com';
+  var wt_domlist = 'msdn.microsoft.com';
+  var wt_pathlist = '';
+  var wt_paramlist = 'DCSext.mtps_devcenter';
+  var wt_siteid = 'MSDN';
+  var gDomain = 'm.webtrends.com';
+  var gDcsId = 'dcsmgru7m99k7mqmgrhudo0k8_8c6m';
+  var gFpc = 'WT_FPC';
+  if (document.cookie.indexOf(gFpc + "=") == -1) {
+    document.write("<scr" + "ipt type='text/javascript' src='" + "http" + (window.location.protocol.indexOf('https:') == 0 ? 's' : '') + "://" + gDomain + "/" + gDcsId + "/wtid.js" + "'><\\/scr" + "ipt>");
+  }
+  var detectedLocale = 'en-us';
+  var wtsp = 'msdnlib_dotnet';
+  var gTrackEvents = '0';
+/*]]>*/
+</script>
+<noscript>&lt;div&gt;&lt;img alt="DCSIMG" id="Img1" width="1" height="1" src="http://m.webtrends.com/dcsmgru7m99k7mqmgrhudo0k8_8c6m/njs.gif?dcsuri=/nojavascript&amp;amp;WT.js=No" /&gt;&lt;/div&gt;</noscript>
+
+
+    </div>
+    
+    <div class="OmnitureContainer">
+      
+
+
+
+<script type="text/javascript">
+  var omni_guid = '11032381-dac6-4fda-899d-9c27efe29593'; 
+</script>
+
+
+
+<noscript>
+    &lt;a href="http://www.omniture.com" title="Web Analytics"&gt;
+        &lt;img src="//msstonojsmsdn.112.2o7.net/b/ss/msstonojsmsdn/1/H.20.2--NS/0" height="1" width="1" border="0" alt="" /&gt;&lt;/a&gt;
+</noscript>
+
+
+    </div>
+    
+  
+</div>
+  <script language="javascript" type="text/javascript" src="./Reading Element and Attribute Content_files/broker.js"></script>
+
+
+  <div class="header">
+    
+
+<table border="0" cellpadding="0" cellspacing="0" class="headerBar cl_lightweight_topnav_slice">
+		<tbody><tr>
+			<td class="leftSection cl_lightweight_header_leftSection_wave leftSectionImageClusterOverride">
+        <div class="tabContainer">
+          <a href="http://msdn.microsoft.com/en-us/default.aspx" title="Home" class=" headerTab">Home</a>
+          <a href="http://msdn.microsoft.com/en-us/library/default.aspx" title="Library" class="headerTabSelected cl_lightweight_selected_tab_repeatX ">Library</a>
+          <a href="http://msdn.microsoft.com/en-us/bb188199.aspx" title="Learn" class=" headerTab">Learn</a>
+          <a href="http://msdn.microsoft.com/en-us/aa570309.aspx" title="Downloads" class=" headerTab">Downloads</a>
+          <a href="http://msdn.microsoft.com/en-us/hh361695.aspx" title="Support" class=" headerTab">Support</a>
+          <a href="http://msdn.microsoft.com/en-us/aa497440.aspx" title="Community" class=" headerTab">Community</a>
+          
+        </div>
+      </td>
+			<td class="rightSection cl_lightweight_header_rightSection_wave rightSectionImageClusterOverride">
+        <div class="tabContainer">
+            
+            <a href="https://login.live.com/login.srf?wa=wsignin1.0&rpsnv=11&ct=1332082459&rver=6.0.5276.0&wp=MCLBI&wlcxt=msdn%24msdn%24msdn&wreply=http%3a%2f%2fmsdn.microsoft.com%2fen-us%2flibrary%2faa720458%2528v%3dvs.71%2529.aspx&lc=1033&id=254354&mkt=en-US" title="Sign in" rel="nofollow">Sign in </a>
+            <span class="pipe">|</span>
+            <a href="http://msdn.microsoft.com/en-us/library/preferences/locale/?returnurl=%252fen-us%252flibrary%252faa720458(v%253dvs.71).aspx" title="Россия - Pусский" rel="nofollow">Россия - Pусский </a>
+            <span class="pipe">|</span>
+            <a class="dispinline clip15x15" href="http://msdn.microsoft.com/en-us/library/preferences/experience/?returnurl=%252fen-us%252flibrary%252faa720458(v%253dvs.71).aspx" title="Preferences" rel="nofollow"><img class="head_gear" src="./Reading Element and Attribute Content_files/c764fa3d6b8a84bd40aa131355215c98.png" alt=""></a>
+            <span class="pipe">|</span>
+            <a id="exportPrintLink" class="dispinline clip30x15 moveToDown" href="http://msdn.microsoft.com/en-us/library/aa720458(d=printer,v=vs.71).aspx" title="Print/Export"><img class="head_print_noarrow" src="./Reading Element and Attribute Content_files/c764fa3d6b8a84bd40aa131355215c98.png" alt=""></a>
+            
+            <div id="exportPrintLinkArrowDiv" class="exportPrintLinkArrow">
+            <a id="exportPrintLinkArrow" class="dispinline clip30x15 moveToDown" href="javascript:void(0);" title="Print/Export"><img class="head_print_arrow" src="./Reading Element and Attribute Content_files/c764fa3d6b8a84bd40aa131355215c98.png" alt=""></a>
+            </div>
+            
+        </div>
+			</td>
+	</tr>
+</tbody></table>
+
+  </div>
+  <div class="contentPlaceHolder">
+    
+    
+  <div class="navigation" id="Navigation" style="width:280px;padding-bottom:96px;">
+    <div class="searchcontainer">
+      
+<form id="SearchForm" action="http://social.msdn.microsoft.com/search/en-us" method="get" style="margin: 0; padding: 0;" onsubmit="return checkSearchBox()">
+<div class="searchBoxContainer" style="">
+  <table class="searchBox" cellpadding="0" cellspacing="0" border="0">
+    <tbody><tr>
+      <td class="searchTextBoxTd">
+        <input id="SearchInput" type="text" maxlength="200" class="searchTextBox" name="query">
+        
+      </td>
+      <td class="searchButtonTd">
+          <input type="image" src="./Reading Element and Attribute Content_files/0d0542f5f45cf9fc7273abd11cf5c0ee.gif" style="position: relative;" title="Search ">
+      </td>
+    </tr>
+  </tbody></table>
+</div>
+</form>
+<script type="text/javascript">
+//<![CDATA[
+    if (!MTPS) var MTPS = {};
+    if (!MTPS.Watermarks) MTPS.Watermarks = {};
+    MTPS.Watermarks.SearchInput = {
+        "control": "SearchInput",
+        "defaultValue": "Search MSDN with Bing",
+        "defaultCSS": "searchTextBox",
+        "focusCSS": "searchTextBoxTrue"
+    };
+    function checkSearchBox() {
+        if (document.getElementById("SearchInput").value == MTPS.Watermarks.SearchInput.defaultValue) {
+            document.getElementById("SearchInput").value = "";
+        }
+    }
+ //]]>
+</script>
+
+
+    </div>
+    <div class="navcontainer">
+      
+<div class="nav">
+    
+    <div id="tocnav">
+        
+        <div class="toclevel0 ancestry">
+            
+            <div class="clip5x9 nav_root">
+                <img src="./Reading Element and Attribute Content_files/c764fa3d6b8a84bd40aa131355215c98.png" class="cl_nav_bullet" alt="">
+            </div>
+            
+            <div class="nav_div_currentroot">
+                <a data-tochassubtree="true" href="http://msdn.microsoft.com/en-us/library/ms123401.aspx" id="ms310241_MSDN.10_en-us" title="MSDN Library">MSDN Library</a>
+            </div>
+            
+            <div class="clip5x9 nav_arrows">
+                <img src="./Reading Element and Attribute Content_files/c764fa3d6b8a84bd40aa131355215c98.png" class="cl_nav_arrow" alt="">
+            </div>
+            
+            <div class="nav_div_currentroot">
+                <a data-tochassubtree="true" href="http://msdn.microsoft.com/en-us/library/ff361664(v=vs.110).aspx" id="aa139615_MSDN.10_en-us" title=".NET Development">.NET Development</a>
+            </div>
+            
+            <div class="clip5x9 nav_arrows">
+                <img src="./Reading Element and Attribute Content_files/c764fa3d6b8a84bd40aa131355215c98.png" class="cl_nav_arrow" alt="">
+            </div>
+            
+            <div class="nav_div_currentroot">
+                <a data-tochassubtree="true" href="http://msdn.microsoft.com/en-us/library/aa338211.aspx" id="aa338211_MSDN.10_en-us" title=".NET Framework 1.1">.NET Framework 1.1</a>
+            </div>
+            
+            <div class="clip5x9 nav_arrows">
+                <img src="./Reading Element and Attribute Content_files/c764fa3d6b8a84bd40aa131355215c98.png" class="cl_nav_arrow" alt="">
+            </div>
+            
+            <div class="nav_div_currentroot">
+                <a data-tochassubtree="true" href="http://msdn.microsoft.com/en-us/library/aa308416(v=vs.71).aspx" id="aa308416_VS.71_en-us" title=".NET Framework">.NET Framework</a>
+            </div>
+            
+            <div class="clip5x9 nav_arrows">
+                <img src="./Reading Element and Attribute Content_files/c764fa3d6b8a84bd40aa131355215c98.png" class="cl_nav_arrow" alt="">
+            </div>
+            
+            <div class="nav_div_currentroot">
+                <a data-tochassubtree="true" href="http://msdn.microsoft.com/en-us/library/aa720433(v=vs.71).aspx" id="aa308497_VS.71_en-us" title="Programming with the .NET Framework">Programming with the .NET Framework</a>
+            </div>
+            
+            <div class="clip5x9 nav_arrows">
+                <img src="./Reading Element and Attribute Content_files/c764fa3d6b8a84bd40aa131355215c98.png" class="cl_nav_arrow" alt="">
+            </div>
+            
+            <div class="nav_div_currentroot">
+                <a data-tochassubtree="true" href="http://msdn.microsoft.com/en-us/library/2bcctyt8(v=vs.71).aspx" id="aa308593_VS.71_en-us" title="Employing XML in the .NET Framework">Employing XML in the .NET Framework</a>
+            </div>
+            
+            <div class="clip13x9 nav_arrows">
+                <img src="./Reading Element and Attribute Content_files/c764fa3d6b8a84bd40aa131355215c98.png" class="cl_nav_dots" alt="">
+            </div>
+            
+            <div class="nav_div_currentroot">
+                <a data-tochassubtree="true" href="http://msdn.microsoft.com/en-us/library/aa720470(v=vs.71).aspx" id="aa308602_VS.71_en-us" title="Reading XML with the XmlReader">Reading XML with the XmlReader</a>
+            </div>
+            
+        </div>
+        
+        <div class="toclevel1 children" style="border-bottom: 1px solid #bbbbbb;">
+            
+                <div class="clip13x9 nav_dots_current">
+                    <img src="./Reading Element and Attribute Content_files/c764fa3d6b8a84bd40aa131355215c98.png" class="cl_nav_dots" alt="">
+                </div>
+                
+                <div>
+                    <a href="http://msdn.microsoft.com/en-us/library/8kch7s8x(v=vs.71).aspx" title="Current Node Position in XmlReader">Current Node Position in XmlReader</a>
+                </div>
+                
+                <div class="clip13x9 nav_dots_current">
+                    <img src="./Reading Element and Attribute Content_files/c764fa3d6b8a84bd40aa131355215c98.png" class="cl_nav_dots" alt="">
+                </div>
+                
+                <div>
+                    <a href="http://msdn.microsoft.com/en-us/library/5h71b9ss(v=vs.71).aspx" title="Property Settings on XmlReader">Property Settings on XmlReader</a>
+                </div>
+                
+                <div class="clip13x9 nav_dots_current">
+                    <img src="./Reading Element and Attribute Content_files/c764fa3d6b8a84bd40aa131355215c98.png" class="cl_nav_dots" alt="">
+                </div>
+                
+                <div class="toclevel1 current">
+                    <a href="./Reading Element and Attribute Content_files/Reading Element and Attribute Content.htm" title="Reading Element and Attribute Content">Reading Element and Attribute Content</a>
+                </div>
+                
+                <div class="clip13x9 nav_dots_current">
+                    <img src="./Reading Element and Attribute Content_files/c764fa3d6b8a84bd40aa131355215c98.png" class="cl_nav_dots" alt="">
+                </div>
+                
+                <div>
+                    <a href="http://msdn.microsoft.com/en-us/library/aa720456(v=vs.71).aspx" title="Reading Attributes with XmlReader">Reading Attributes with XmlReader</a>
+                </div>
+                
+                <div class="clip13x9 nav_dots_current">
+                    <img src="./Reading Element and Attribute Content_files/c764fa3d6b8a84bd40aa131355215c98.png" class="cl_nav_dots" alt="">
+                </div>
+                
+                <div>
+                    <a href="http://msdn.microsoft.com/en-us/library/aa720634(v=vs.71).aspx" title="Skipping Content with XmlReader">Skipping Content with XmlReader</a>
+                </div>
+                
+                <div class="clip13x9 nav_dots_current">
+                    <img src="./Reading Element and Attribute Content_files/c764fa3d6b8a84bd40aa131355215c98.png" class="cl_nav_dots" alt="">
+                </div>
+                
+                <div>
+                    <a href="http://msdn.microsoft.com/en-us/library/a4f0e433(v=vs.71).aspx" title="EntityReference Reading and Expansion">EntityReference Reading and Expansion</a>
+                </div>
+                
+                <div class="clip13x9 nav_dots_current">
+                    <img src="./Reading Element and Attribute Content_files/c764fa3d6b8a84bd40aa131355215c98.png" class="cl_nav_dots" alt="">
+                </div>
+                
+                <div>
+                    <a data-tochassubtree="true" href="http://msdn.microsoft.com/en-us/library/tfz3cz6w(v=vs.71).aspx" id="aa308603_VS.71_en-us" title="Reading XML Data with XmlTextReader">Reading XML Data with XmlTextReader</a>
+                </div>
+                
+                <div class="clip13x9 nav_dots_current">
+                    <img src="./Reading Element and Attribute Content_files/c764fa3d6b8a84bd40aa131355215c98.png" class="cl_nav_dots" alt="">
+                </div>
+                
+                <div>
+                    <a href="http://msdn.microsoft.com/en-us/library/443c16cf(v=vs.71).aspx" title="Reading Node Trees with XmlNodeReader">Reading Node Trees with XmlNodeReader</a>
+                </div>
+                
+                <div class="clip13x9 nav_dots_current">
+                    <img src="./Reading Element and Attribute Content_files/c764fa3d6b8a84bd40aa131355215c98.png" class="cl_nav_dots" alt="">
+                </div>
+                
+                <div>
+                    <a href="http://msdn.microsoft.com/en-us/library/aa310910(v=vs.71).aspx" title="Validating XML with XmlValidatingReader">Validating XML with XmlValidatingReader</a>
+                </div>
+                
+                <div class="clip13x9 nav_dots_current">
+                    <img src="./Reading Element and Attribute Content_files/c764fa3d6b8a84bd40aa131355215c98.png" class="cl_nav_dots" alt="">
+                </div>
+                
+                <div>
+                    <a href="http://msdn.microsoft.com/en-us/library/hbfeb09f(v=vs.71).aspx" title="Object Comparison Using XmlNameTable with XmlReader">Object Comparison Using XmlNameTable with XmlReader</a>
+                </div>
+                
+                <div class="clip13x9 nav_dots_current">
+                    <img src="./Reading Element and Attribute Content_files/c764fa3d6b8a84bd40aa131355215c98.png" class="cl_nav_dots" alt="">
+                </div>
+                
+                <div>
+                    <a href="http://msdn.microsoft.com/en-us/library/t2abc1zd(v=vs.71).aspx" title="Customized XML Reader Creation">Customized XML Reader Creation</a>
+                </div>
+                
+                <div class="clip13x9 nav_dots_current">
+                    <img src="./Reading Element and Attribute Content_files/c764fa3d6b8a84bd40aa131355215c98.png" class="cl_nav_dots" alt="">
+                </div>
+                
+                <div>
+                    <a href="http://msdn.microsoft.com/en-us/library/sbw89de7(v=vs.71).aspx" title="Comparing XmlReader to SAX Reader">Comparing XmlReader to SAX Reader</a>
+                </div>
+                
+        </div>
+        
+    </div>
+    <img src="./Reading Element and Attribute Content_files/030c41d9079671d09a62d8e2c1db6973.gif" alt="Separator" class="communityContentNavigationSeparator cl_lt_cc_line_top">
+    
+</div>
+
+<script type="text/javascript"> 
+  //<![CDATA[
+  if (!MTPS) var MTPS = {};
+  MTPS.TopicNodes= {
+  
+            "_last": ''
+    };
+  //]]>
+</script>
+
+    </div>
+    
+  </div>
+  <div id="tocResizeContainer" style="visibility: visible; ">
+  <a href="javascript:void(0)" class="tocResize" id="TocResize" style="left:280px">
+    <img id="ResizeImageIncrease" class="cl_nav_resize_open" src="./Reading Element and Attribute Content_files/c764fa3d6b8a84bd40aa131355215c98.png" title="Expand" alt="Expand">
+      <img id="ResizeImageReset" class="cl_nav_resize_close" src="./Reading Element and Attribute Content_files/c764fa3d6b8a84bd40aa131355215c98.png" style="display:none" title="Minimize" alt="Minimize">
+  </a>
+  </div>
+  <div class="content">
+    
+    
+
+<div class="clip117x31 logo">
+  <a href="http://msdn.microsoft.com/en-us/default.aspx">
+    <img src="./Reading Element and Attribute Content_files/c764fa3d6b8a84bd40aa131355215c98.png" class="msdn_body_logo" alt="MSDN" title="MSDN">
+  </a>
+</div>
+
+    <div class="topicContainer">
+        
+            <div id="FeedbackCounterContainer">
+                
+
+
+
+
+
+
+            </div>
+        <div class="topic" xmlns:mtps="http://msdn2.microsoft.com/mtps" xmlns="http://www.w3.org/1999/xhtml">
+  <h1 class="title">Reading Element and Attribute Content</h1><div id="ratingCounter">
+    <span id="rcA" class="ratingText">
+        0 out of 5 rated this helpful <a id="rateThisTopic" href="http://msdn.microsoft.com/en-us/library/aa720458(v=vs.71).aspx#feedback" title="Rate this topic">Rate this topic</a>
+        
+    </span>
+</div><div style="clear: both; "></div>
+  <div class="lw_vs">
+    <div id="curversion">
+      <strong>
+            .NET Framework 1.1</strong>
+    </div>
+  </div>
+  <div style="clear:both;"></div>
+  
+  <a name="cpconreadingelementattributecontent">
+    
+  </a>  <div id="nstext" valign="bottom">  <p>To read content of elements and attributes in one call, the <b>XmlReader</b> provides <b>ReadInnerXml</b> and <b>ReadOuterXml</b> methods. When positioned on a node, the <b>ReadInnerXml</b> property pulls in all content from the node, including markup, starting after the element tag up to the element end tag. After the <b>ReadInnerXml</b> call, the XmlReader is positioned after the end element tag. Assuming the following XML input:</p> <p><b>Input</b></p> 
+
+<div class="codeSnippetContainer" xmlns="http://www.w3.org/1999/xhtml">
+  
+  
+    <div class="codeSnippetContainerTabs">
+        
+    </div>
+    <div class="codeSnippetContainerCodeContainer">
+        <div class="codeSnippetToolBar">
+            <div class="codeSnippetToolBarText">
+                <a name="CodeSnippetCopyLink" title="Copy to clipboard." href="javascript:CodeSnippet_CopyCode('CodeSnippetContainerCode_0b47d662-942b-4dfa-94bc-87a04b6c75f4');">Copy</a>
+            </div>
+        </div>
+        <div id="CodeSnippetContainerCode_0b47d662-942b-4dfa-94bc-87a04b6c75f4" class="codeSnippetContainerCode" dir="ltr">
+            <div style="color:Black;"><pre>&lt;Book&gt;
+ &lt;Price Retail="29.95" /&gt;
+ &lt;Title BookTitle="My First Book" author="me" /&gt;
+&lt;/Book&gt;
+</pre></div>
+            
+        </div>
+    </div>
+</div>
+ <p>This is the output that is returned as a result from calling <b>ReadInnerXml</b> when the reader is positioned on the <code class="ce">Book</code> element:</p> 
+
+<div class="codeSnippetContainer" xmlns="http://www.w3.org/1999/xhtml">
+  
+  
+    <div class="codeSnippetContainerTabs">
+        
+    </div>
+    <div class="codeSnippetContainerCodeContainer">
+        <div class="codeSnippetToolBar">
+            <div class="codeSnippetToolBarText">
+                <a name="CodeSnippetCopyLink" title="Copy to clipboard." href="javascript:CodeSnippet_CopyCode('CodeSnippetContainerCode_36199837-89ca-43ed-836e-a88e06eb1bc6');">Copy</a>
+            </div>
+        </div>
+        <div id="CodeSnippetContainerCode_36199837-89ca-43ed-836e-a88e06eb1bc6" class="codeSnippetContainerCode" dir="ltr">
+            <div style="color:Black;"><pre> &lt;Price Retail="29.95" /&gt;
+ &lt;Title BookTitle="My First Book" author="me" /&gt;
+</pre></div>
+            
+        </div>
+    </div>
+</div>
+ <p><b>ReadInnerXml</b> positions the reader after the end tag of the element being read. That means that for the input above, the current node is the node after the <code class="ce">&lt;/Book&gt;</code> end element, assuming one exists. Doing a <b>Read</b> method would then advance it an additional element. The following code sample shows the current node in the stream after the <b>ReadInnerXml</b> is called, and how executing a <b>Read</b> after the <b>ReadInnerXml</b> advances the reader yet another node again.</p> 
+
+<div class="codeSnippetContainer" xmlns="http://www.w3.org/1999/xhtml">
+  
+  
+    <div class="codeSnippetContainerTabs">
+        <div class="codeSnippetContainerTab codeSnippetContainerTabSingle" dir="ltr"><a>C#</a></div>
+    </div>
+    <div class="codeSnippetContainerCodeContainer">
+        <div class="codeSnippetToolBar">
+            <div class="codeSnippetToolBarText">
+                <a name="CodeSnippetCopyLink" title="Copy to clipboard." href="javascript:CodeSnippet_CopyCode('CodeSnippetContainerCode_9452d566-a742-4a3b-b4e5-694d78363c1f');">Copy</a>
+            </div>
+        </div>
+        <div id="CodeSnippetContainerCode_9452d566-a742-4a3b-b4e5-694d78363c1f" class="codeSnippetContainerCode" dir="ltr">
+            <div style="color:Black;"><pre><span style="color:Blue;">public</span> <span style="color:Blue;">static</span> <span style="color:Blue;">void</span> Main() 
+{
+    <span style="color:Blue;">string</span> text = <span style="color:#A31515;">@"&lt;book&gt;&lt;one&gt;&lt;title&gt;ABC&lt;/title&gt;&lt;/one&gt;&lt;two&gt;&lt;price&gt;24.95&lt;/price&gt;&lt;/two&gt;&lt;/book&gt;"</span>;
+    XmlTextReader reader = <span style="color:Blue;">new</span> XmlTextReader(<span style="color:Blue;">new</span> StringReader(text));
+    reader.WhitespaceHandling = WhitespaceHandling.None;
+
+    <span style="color:Green;">// Moves the reader to the 'book' node.</span>
+    reader.MoveToContent(); 
+
+    <span style="color:Green;">// Moves the reader to the 'one' node.</span>
+    reader.Read(); 
+    reader.MoveToContent();
+
+    <span style="color:Green;">// Reads the inner XML of the 'one' node, which is the entire 'title'</span>
+    <span style="color:Green;">// node, and outputs &lt;title&gt;ABC&lt;/title&gt;. </span>
+    Console.WriteLine(reader.ReadInnerXml()); 
+
+    <span style="color:Green;">// The reader is now positioned on the 'two' node.</span>
+    Console.WriteLine(reader.Name);
+
+    <span style="color:Green;">// Calling Read will advance the reader beyond the 'two' node to </span>
+    <span style="color:Green;">// the 'price' node.</span>
+    reader.Read();
+    <span style="color:Green;">// Outputs the node of 'price'.</span>
+    Console.WriteLine(reader.Name);
+}
+</pre></div>
+            
+        </div>
+    </div>
+</div>
+ <p>The output from the code is:</p> <p><code class="ce">&lt;title&gt;ABC&lt;/title&gt;</code></p> <p><code class="ce">two</code></p> <p><code class="ce">price</code></p> <p>The <b>ReadInnerXml</b> parses XML and returns the content, depending on the <b>XmlNodeType</b>. The following table shows sample content for an element and attribute, the values returned from a call to <b>ReadInnerXml</b>, and the position of the reader after the call.</p> <div class="tablediv"><table class="dtTABLE"> <tbody><tr valign="top"> <th width="25%">Node type</th> <th width="25%">Child content</th> <th width="25%">Return value</th> <th width="25%">Position</th> </tr> <tr valign="top"> <td width="25%">Element</td> <td width="25%">&lt;myelem&gt; text &lt;/myelem&gt;</td> <td width="25%">text</td> <td width="25%">On the node after the ending element &lt;/myelem&gt;</td> </tr> <tr valign="top"> <td width="25%">Attribute</td> <td width="25%">&lt;myelem attr1="val1" attr2="val2"&gt; text &lt;/myelem&gt;</td> <td width="25%">val1</td> <td width="25%">Remains on the attribute node "attr1".</td> </tr> </tbody></table></div> <p>All other <b>XmlNodeTypes</b> return <b>string.Empty</b>.</p> <p>The <b>ReadOuterXml</b> method is similar in behavior to the <b>ReadInnerXml</b> method with the exception that its return value includes the start and end tag. When positioned on a leaf node, this method is identical to performing a <b>Read</b> operation.</p> <p>The <b>ReadOuterXml</b> parses XML and returns various child content, depending on the current <b>XmlNodeType</b>. The following table shows sample content for an element and attribute, the values returned from a call to <b>ReadOuterXml</b>, and the position of the reader after the call.</p> <div class="tablediv"><table class="dtTABLE"> <tbody><tr valign="top"> <th width="25%">Node type</th> <th width="25%">Child content</th> <th width="25%">Return value</th> <th width="25%">Position</th> </tr> <tr valign="top"> <td width="25%">Element</td> <td width="25%">&lt;elem1&gt; text &lt;/elem1&gt;</td> <td width="25%">&lt;elem1&gt; text &lt;/elem1&gt;</td> <td width="25%">Positioned after the &lt;/elem1&gt; tag.</td> </tr> <tr valign="top"> <td width="25%">Attribute</td> <td width="25%">&lt;elem1 attr1="attrValue1" attr2="attrValue2" &gt; text &lt;/elem1&gt;</td> <td width="25%">attr1="attrValue1"</td> <td width="25%">Positioned on the attribute node "attr1".</td> </tr> </tbody></table></div> <p>All other node types return <b>string.Empty</b> to the <b>ReadOuterXml</b>.</p> <h4 class="dtH4">See Also</h4> <p><a href="http://msdn.microsoft.com/en-us/library/9d83k261(v=vs.71).aspx">Reading XML with the XmlReader</a> | <a href="http://msdn.microsoft.com/en-us/library/aa719854(v=vs.71).aspx">Current Node Position in XmlReader</a> | <a href="http://msdn.microsoft.com/en-us/library/aa720439(v=vs.71).aspx">Property Settings on XmlReader</a> | <a href="http://msdn.microsoft.com/en-us/library/aa720352(v=vs.71).aspx">Object Comparison Using XmlNameTable with XmlReader</a> | <a href="http://msdn.microsoft.com/en-us/library/aa720456(v=vs.71).aspx">Reading Attributes with XmlReader</a> | <a href="http://msdn.microsoft.com/en-us/library/aa720634(v=vs.71).aspx">Skipping Content with XmlReader</a> | <a href="http://msdn.microsoft.com/en-us/library/aa720036(v=vs.71).aspx">EntityReference Reading and Expansion</a> | <a href="http://msdn.microsoft.com/en-us/library/aa719723(v=vs.71).aspx">Comparing XmlReader to SAX Reader</a> | <a href="http://msdn.microsoft.com/en-us/library/aa720466(v=vs.71).aspx">Reading XML Data with XmlTextReader</a> | <a href="http://msdn.microsoft.com/en-us/library/aa720460(v=vs.71).aspx">Reading Node Trees with XmlNodeReader</a> | <a href="http://msdn.microsoft.com/en-us/library/aa310910(v=vs.71).aspx">Validating XML with XmlValidatingReader</a> | <a href="http://msdn.microsoft.com/en-us/library/t2abc1zd(v=vs.71).aspx">Customized XML Reader Creation</a> | <a href="http://msdn.microsoft.com/en-us/library/system.xml.xmlreader(v=vs.71).aspx">XmlReader Class</a> | <a href="http://msdn.microsoft.com/en-us/library/system.xml.xmlreader_members(v=vs.71).aspx">XmlReader Members</a> | <a href="http://msdn.microsoft.com/en-us/library/system.xml.xmlnodereader(v=vs.71).aspx">XmlNodeReader Class</a> | <a href="http://msdn.microsoft.com/en-us/library/system.xml.xmlnodereader_members(v=vs.71).aspx">XmlNodeReader Members</a> | <a href="http://msdn.microsoft.com/en-us/library/system.xml.xmltextreader(v=vs.71).aspx">XmlTextReader Class</a> | <a href="http://msdn.microsoft.com/en-us/library/system.xml.xmltextreader_members(v=vs.71).aspx">XmlTextReader Members</a> | <a href="http://msdn.microsoft.com/en-us/library/system.xml.xmlvalidatingreader(v=vs.71).aspx">XmlValidatingReader Class</a> | <a href="http://msdn.microsoft.com/en-us/library/system.xml.xmlvalidatingreader_members(v=vs.71).aspx">XmlValidatingReader</a></p>  </div> </div>
+
+        
+
+
+
+<div id="contentFeedback">
+    <form method="post" action="http://msdn.microsoft.com/en-us/library/feedback/add/aa720458(v=vs.71).aspx">
+    <div id="contentFeedbackContainer">
+        <div class="FeedbackTitleContainer">
+            <a name="feedback"></a>
+        Did you find this helpful?
+            <input id="rdIsUsefulYes" name="rdIsUseful" type="radio" value="1" onclick="toggleContentFeedback(&#39;Yes&#39;);"><label for="rdIsUsefulYes">Yes</label>
+            <input id="rdIsUsefulNo" name="rdIsUseful" type="radio" value="0" onclick="toggleContentFeedback(&#39;No&#39;);"><label for="rdIsUsefulNo">No</label>
+        
+        </div>
+        
+            <div id="contentFeedbackQAContainer">
+                
+                    <div id="feedbackListNoContainer" class="FeedbackListContainer">
+                        
+                            <div>
+                                <input id="chkbxNo201" name="chkbxNo" type="checkbox" value="201">
+                                <label for="chkbxNo201">Not accurate</label>
+                            </div>
+                        
+                            <div>
+                                <input id="chkbxNo202" name="chkbxNo" type="checkbox" value="202">
+                                <label for="chkbxNo202">Not enough depth</label>
+                            </div>
+                        
+                            <div>
+                                <input id="chkbxNo203" name="chkbxNo" type="checkbox" value="203">
+                                <label for="chkbxNo203">Need more code examples</label>
+                            </div>
+                        
+                    </div>
+                
+                <div class="FeedbackTellUsMoreContainer">
+                    <textarea id="feedbackText" name="feedbackText" class="TellUsMoreTextBoxSearchLoaded" onfocus="WatermarkFocus(this, &#39;Tell us more...&#39;, &#39;TellUsMoreTextBoxSearch&#39;)" onblur="WatermarkBlur(this, &#39;Tell us more...&#39;, &#39;TellUsMoreTextBoxSearchLoaded&#39;)" onkeydown="TextBoxCharactersCounter(this, document.getElementById(&#39;feedbackTextCounter&#39;), 1500)" onkeyup="TextBoxCharactersCounter(this, document.getElementById(&#39;feedbackTextCounter&#39;), 1500)">Tell us more...</textarea>
+                </div>
+                <span class="counter">(<span id="feedbackTextCounter">1500</span> characters remaining)</span>
+                <input type="hidden" id="returnUrl" name="returnUrl" value="http://msdn.microsoft.com/en-us/library/aa720458(v=vs.71).aspx">
+                <input type="submit" id="submit" value="Submit" title="Click to Submit Feedback" onclick="WatermarkOnSubmit(document.getElementById(&#39;feedbackText&#39;), &#39;Tell us more...&#39;, &#39;TellUsMoreTextBoxSearch&#39;)">
+                <div style="clear: both;"></div>
+            </div>  
+        
+    </div>
+    </form>
+</div>
+
+    </div>
+    
+  </div>
+        
+  </div>
+  <div class="footer">
+    
+
+<div id="footer" class="msdn footerContainer cl_footer_slice">
+  <div class="footerLogoContainer">
+    <div class="footerContent">
+    <div class="copyright">
+      © 2012 Microsoft. All rights reserved.</div>
+    <div class="footerLogo cl_footer_logo"></div>
+    <a href="http://msdn.microsoft.com/cc300389.aspx">Terms of Use</a><span class="pipe"> | </span>
+    <a href="http://www.microsoft.com/library/toolbar/3.0/trademarks/en-us.mspx">Trademarks</a><span class="pipe"> | </span>
+    <a href="http://www.microsoft.com/info/privacy.mspx">Privacy Statement</a>
+    <span class="pipe">| </span>
+    <span class="FeedbacklinkDisabled" id="FeedbacklinkDisabled">Site Feedback</span>
+    <a id="Feedbacklink" title="Site Feedback" class="FeedbackLink" href="javascript:void(0)">
+      Site Feedback
+        <span class="FeedbackButton clip20x21" id="FeedbackButton">
+          <img id="feedBackImg" class="cl_footer_feedback_icon" src="./Reading Element and Attribute Content_files/c764fa3d6b8a84bd40aa131355215c98.png" alt="Site Feedback">
+        </span>
+      </a>
+    
+  <div id="FeedbackContainer" class="FeedbackContainer">
+    <form id="siteFeedbackForm" method="post" action="http://msdn.microsoft.com/en-us/library/feedback/add/aa720458(v=vs.71).aspx">
+    <div class="FeedbackTitleContainer">
+        <div class="FeedbackTitle">
+            Site Feedback</div>
+        <div class="FeedbackCancel">
+            <a href="javascript:;" onclick="document.getElementById(&#39;FeedbackContainer&#39;).style.display = &#39;none&#39;;">x</a>
+            </div>
+    </div>
+    <div class="FeedbackData">
+        <div class="FeedbackInfoText">
+            Tell us about your experience...
+        </div>
+        <div class="QuestionText">
+            Did the page load quickly?
+        </div>
+        <div class="AnswerText">
+            
+            <span>
+                Yes<span>
+                    <input id="searchBox" name="searchBox" type="radio" value="1"></span></span>
+            
+            <span>
+                No<span>
+                    <input id="searchBox" name="searchBox" type="radio" value="0"></span></span>
+            
+        </div>
+        <div class="QuestionText">
+            Do you like the page design?
+        </div>
+        <div class="AnswerText">
+            
+            <span>
+                Yes<span>
+                    <input id="tabbedCode" name="tabbedCode" type="radio" value="1"></span></span>
+            
+            <span>
+                No<span>
+                    <input id="tabbedCode" name="tabbedCode" type="radio" value="0"></span></span>
+            
+        </div>
+        <div class="QuestionText">
+            Tell us more
+        </div>
+        <div class="FeedbackTextAreaContainer">
+            <textarea id="feedbackText" data-maxlength="4000" name="feedbackText" cols="25" rows="5" class="FeedbackTextArea"></textarea>
+            
+            <textarea id="feedbackDescription" name="feedbackDescription" cols="25" rows="10" style="display:none;">Enter description here.</textarea>
+            <input type="hidden" id="feedbackPriority" name="feedbackPriority" value="">
+            <input type="hidden" id="feedbackSourceUrl" name="feedbackSourceUrl" value="">
+            <input type="hidden" id="ClientIP" name="ClientIP" value="">
+            <input type="hidden" id="ClientOS" name="ClientOS" value="">
+            <input type="hidden" id="ClientBrowser" name="ClientBrowser" value="">
+            <input type="hidden" id="ClientTime" name="ClientTime" value="">
+            <input type="hidden" id="ClientTimeZone" name="ClientTimeZone" value="">
+            
+            
+        </div>
+        <div>
+            <input id="siteFeedbackSubmit" type="submit" value="Send" class="FeedbackSubmit" onclick="submitSiteFeedback(&#39;-1&#39;);">
+        </div>
+    </div>
+    <input type="hidden" id="returnUrl" name="returnUrl" value="http://msdn.microsoft.com/en-us/library/aa720458(v=vs.71).aspx">
+    
+    
+    <input type="hidden" id="feedBackVersion" name="feedBackVersion" value="1">
+    
+  </form> 
+</div>
+
+    </div>
+  </div>
+</div>
+
+  </div>
+<!--[CDATA[ Third party scripts and code linked to or referenced from this website are licensed to you by the parties that own such code, not by Microsoft.  See ASP.NET Ajax CDN Terms of Use – http://www.asp.net/ajaxlibrary/CDN.ashx. ]]-->
+<script type="text/javascript" src="./Reading Element and Attribute Content_files/Combined.js" xmlns="http://www.w3.org/1999/xhtml"></script>
+
+<script src="./Reading Element and Attribute Content_files/broker-config.js"></script><div style="display: none; " id="_WEDCSInsertedData"><iframe id="_msnFrame" src="./Reading Element and Attribute Content_files/Sync.htm" style="z-index:-1;height:1px;width:1px;display:none;visibility:hidden;" onload="javascript:MscomBeacon();"></iframe></div></body></html>

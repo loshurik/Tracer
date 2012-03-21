@@ -1,0 +1,582 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- saved from url=(0062)http://msdn.microsoft.com/en-us/library/aa720456(v=vs.71).aspx -->
+<html xmlns="http://www.w3.org/1999/xhtml"><head id="ctl00_Head1" xmlns="http://www.w3.org/1999/xhtml"><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><link rel="stylesheet" type="text/css" href="./Reading Attributes with XmlReader_files/Combined.css" xmlns="http://www.w3.org/1999/xhtml"><title>
+	
+  Reading Attributes with XmlReader
+
+</title><meta name="DCS.dcsuri" content="/en-us/library/aa720456(d=lightweight,l=en-us,v=vs.71).aspx"><meta name="NormalizedUrl" content="http://msdn.microsoft.com/en-us/library/aa720456(d=lightweight,l=en-us,v=vs.71).aspx"><meta name="VotingContextUrl" content="http://msdn.microsoft.com/en-us/library/aa720456(d=lightweight,l=en-us,v=vs.71).aspx"><meta name="MN" content="74838605-7:52:59 AM"><meta name="Search.ShortId" content="aa720456"><meta name="Ms.Locale" content="en-us"><link rel="canonical" href="./Reading Attributes with XmlReader_files/Reading Attributes with XmlReader.htm" xmlns="http://www.w3.org/1999/xhtml"><link rel="alternate" media="print" href="http://msdn.microsoft.com/en-us/library/aa720456(d=printer,v=vs.71).aspx" xmlns="http://www.w3.org/1999/xhtml"><link rel="stylesheet" type="text/css" href="./Reading Attributes with XmlReader_files/8e010b67ceb176b577f5afa1ceb6f5ad.css" media="print" title="printonly" xmlns="http://www.w3.org/1999/xhtml"><link type="text/css" rel="stylesheet" href="data:text/css,"><style id="wrc-css" type="text/css">.wrcx {display:none} .r .wrcx, .osl .wrcx, .bc .wrcx, .fc .wrcx, #rhsline ol .wrcx {display:inline; background: url("chrome-extension://icmlaeflemplmjndnaapfdbbnpncnbda/skin/images/icons/grey0-16.png") right no-repeat}
+.wrc0 {display:none} .r .wrc0, .osl .wrc0, .bc .wrc0, .fc .wrc0, #rhsline ol .wrc0 {display:inline; background: url("chrome-extension://icmlaeflemplmjndnaapfdbbnpncnbda/skin/images/icons/grey0-16.png") right no-repeat}
+.wrc11 {display:none} .r .wrc11, .osl .wrc11, .bc .wrc11, .fc .wrc11, #rhsline ol .wrc11 {display:inline; background: url("chrome-extension://icmlaeflemplmjndnaapfdbbnpncnbda/skin/images/icons/green1-16.png") right no-repeat}
+.wrc12 {display:none} .r .wrc12, .osl .wrc12, .bc .wrc12, .fc .wrc12, #rhsline ol .wrc12 {display:inline; background: url("chrome-extension://icmlaeflemplmjndnaapfdbbnpncnbda/skin/images/icons/green2-16.png") right no-repeat}
+.wrc13 {display:none} .r .wrc13, .osl .wrc13, .bc .wrc13, .fc .wrc13, #rhsline ol .wrc13 {display:inline; background: url("chrome-extension://icmlaeflemplmjndnaapfdbbnpncnbda/skin/images/icons/green3-16.png") right no-repeat}
+.wrc21 {display:none} .r .wrc21, .osl .wrc21, .bc .wrc21, .fc .wrc21, #rhsline ol .wrc21 {display:inline; background: url("chrome-extension://icmlaeflemplmjndnaapfdbbnpncnbda/skin/images/icons/yellow1-16.png") right no-repeat}
+.wrc22 {display:none} .r .wrc22, .osl .wrc22, .bc .wrc22, .fc .wrc22, #rhsline ol .wrc22 {display:inline; background: url("chrome-extension://icmlaeflemplmjndnaapfdbbnpncnbda/skin/images/icons/yellow2-16.png") right no-repeat}
+.wrc23 {display:none} .r .wrc23, .osl .wrc23, .bc .wrc23, .fc .wrc23, #rhsline ol .wrc23 {display:inline; background: url("chrome-extension://icmlaeflemplmjndnaapfdbbnpncnbda/skin/images/icons/yellow3-16.png") right no-repeat}
+.wrc31 {display:none} .r .wrc31, .osl .wrc31, .bc .wrc31, .fc .wrc31, #rhsline ol .wrc31 {display:inline; background: url("chrome-extension://icmlaeflemplmjndnaapfdbbnpncnbda/skin/images/icons/red1-16.png") right no-repeat}
+.wrc32 {display:none} .r .wrc32, .osl .wrc32, .bc .wrc32, .fc .wrc32, #rhsline ol .wrc32 {display:inline; background: url("chrome-extension://icmlaeflemplmjndnaapfdbbnpncnbda/skin/images/icons/red2-16.png") right no-repeat}
+.wrc33 {display:none} .r .wrc33, .osl .wrc33, .bc .wrc33, .fc .wrc33, #rhsline ol .wrc33 {display:inline; background: url("chrome-extension://icmlaeflemplmjndnaapfdbbnpncnbda/skin/images/icons/red3-16.png") right no-repeat}
+.wrc_icon{margin:0;padding:0;padding-left:15px !important;width:16px !important; height:16px !important;line-height:16px !important;}
+#wrchoverdiv{padding-bottom:20px; position:absolute; width:180px; background:transparent url(chrome-extension://icmlaeflemplmjndnaapfdbbnpncnbda/skin/images/background-body.jpg) top left repeat-x; display:none; font-family: Segoe UI, Arial Unicode MS, Arial, Sans-Serif; font-size: 14px; z-index:9999999;}
+#wrchoverdiv{cursor:default;}
+#wrchoverdiv #wrccontainer{width:180px;}
+#wrchoverdiv #wrcheader{width:140px; height:42px; background:url(chrome-extension://icmlaeflemplmjndnaapfdbbnpncnbda/skin/images/logo.jpg) bottom left no-repeat; text-align:right; line-height:42px; color:orange; margin:0 auto;}
+#wrchoverdiv .wrchorizontal{width:180px; height:2px; background:url(chrome-extension://icmlaeflemplmjndnaapfdbbnpncnbda/skin/images/horizontal-line.jpg) bottom left no-repeat;}
+#wrchoverdiv #wrccurrentvote{height:25px; line-height:25px; color:#FFF; text-align:center; text-transform:uppercase;}
+#wrchoverdiv #wrcrating{margin:5px auto; width:69px; height:55px; background:url(chrome-extension://icmlaeflemplmjndnaapfdbbnpncnbda/skin/images/icons/grey-0.png) bottom left no-repeat;}
+#wrchoverdiv #wrcrating.wrcbx{background:url(chrome-extension://icmlaeflemplmjndnaapfdbbnpncnbda/skin/images/icons/grey-0.png);}
+#wrchoverdiv #wrcrating.wrcb0{background:url(chrome-extension://icmlaeflemplmjndnaapfdbbnpncnbda/skin/images/icons/grey-0.png);}
+#wrchoverdiv #wrcrating.wrcb11{background:url(chrome-extension://icmlaeflemplmjndnaapfdbbnpncnbda/skin/images/icons/green-1.png);}
+#wrchoverdiv #wrcrating.wrcb12{background:url(chrome-extension://icmlaeflemplmjndnaapfdbbnpncnbda/skin/images/icons/green-2.png);}
+#wrchoverdiv #wrcrating.wrcb13{background:url(chrome-extension://icmlaeflemplmjndnaapfdbbnpncnbda/skin/images/icons/green-3.png);}
+#wrchoverdiv #wrcrating.wrcb21{background:url(chrome-extension://icmlaeflemplmjndnaapfdbbnpncnbda/skin/images/icons/yellow-1.png);}
+#wrchoverdiv #wrcrating.wrcb22{background:url(chrome-extension://icmlaeflemplmjndnaapfdbbnpncnbda/skin/images/icons/yellow-2.png);}
+#wrchoverdiv #wrcrating.wrcb23{background:url(chrome-extension://icmlaeflemplmjndnaapfdbbnpncnbda/skin/images/icons/yellow-3.png);}
+#wrchoverdiv #wrcrating.wrcb31{background:url(chrome-extension://icmlaeflemplmjndnaapfdbbnpncnbda/skin/images/icons/red-1.png);}
+#wrchoverdiv #wrcrating.wrcb32{background:url(chrome-extension://icmlaeflemplmjndnaapfdbbnpncnbda/skin/images/icons/red-2.png);}
+#wrchoverdiv #wrcrating.wrcb33{background:url(chrome-extension://icmlaeflemplmjndnaapfdbbnpncnbda/skin/images/icons/red-3.png);}
+#wrchoverdiv #wrcratingtext{margin:3px 5px; color:#FFF; text-align:center; padding:0; font-size:12px;}
+#wrchoverdiv #wrcweighttext{margin:3px 5px; color:#FFF; text-align:center; padding:0; font-size:12px;}
+#wrchoverdiv #wrcflags{width:150px; height:70px; margin:0 auto;}
+#wrchoverdiv .wrcicon{width:30px; height:30px; float:left;}
+#wrchoverdiv #wrcicon_shopping{background:url(chrome-extension://icmlaeflemplmjndnaapfdbbnpncnbda/skin/images/icons/shopping-small-disable.png) top left no-repeat;}
+#wrchoverdiv #wrcicon_shopping.selected{background:url(chrome-extension://icmlaeflemplmjndnaapfdbbnpncnbda/skin/images/icons/shopping-small-selected.png) top left no-repeat;}
+#wrchoverdiv #wrcicon_social{background:url(chrome-extension://icmlaeflemplmjndnaapfdbbnpncnbda/skin/images/icons/social-small-disable.png) top left no-repeat;}
+#wrchoverdiv #wrcicon_social.selected{background:url(chrome-extension://icmlaeflemplmjndnaapfdbbnpncnbda/skin/images/icons/social-small-selected.png) top left no-repeat;}
+#wrchoverdiv #wrcicon_news{background:url(chrome-extension://icmlaeflemplmjndnaapfdbbnpncnbda/skin/images/icons/news-small-disable.png) top left no-repeat;}
+#wrchoverdiv #wrcicon_news.selected{background:url(chrome-extension://icmlaeflemplmjndnaapfdbbnpncnbda/skin/images/icons/news-small-selected.png) top left no-repeat;}
+#wrchoverdiv #wrcicon_it{background:url(chrome-extension://icmlaeflemplmjndnaapfdbbnpncnbda/skin/images/icons/it-small-disable.png) top left no-repeat;}
+#wrchoverdiv #wrcicon_it.selected{background:url(chrome-extension://icmlaeflemplmjndnaapfdbbnpncnbda/skin/images/icons/it-small-selected.png) top left no-repeat;}
+#wrchoverdiv #wrcicon_corporate{background:url(chrome-extension://icmlaeflemplmjndnaapfdbbnpncnbda/skin/images/icons/corporate-small-disable.png) top left no-repeat;}
+#wrchoverdiv #wrcicon_corporate.selected{background:url(chrome-extension://icmlaeflemplmjndnaapfdbbnpncnbda/skin/images/icons/corporate-small-selected.png) top left no-repeat;}
+#wrchoverdiv #wrcicon_pornography{background:url(chrome-extension://icmlaeflemplmjndnaapfdbbnpncnbda/skin/images/icons/pornography-small-disable.png) top left no-repeat;}
+#wrchoverdiv #wrcicon_pornography.selected{background:url(chrome-extension://icmlaeflemplmjndnaapfdbbnpncnbda/skin/images/icons/pornography-small-selected.png) top left no-repeat;}
+#wrchoverdiv #wrcicon_violence{background:url(chrome-extension://icmlaeflemplmjndnaapfdbbnpncnbda/skin/images/icons/violence-small-disable.png) top left no-repeat;}
+#wrchoverdiv #wrcicon_violence.selected{background:url(chrome-extension://icmlaeflemplmjndnaapfdbbnpncnbda/skin/images/icons/violence-small-selected.png) top left no-repeat;}
+#wrchoverdiv #wrcicon_gambling{background:url(chrome-extension://icmlaeflemplmjndnaapfdbbnpncnbda/skin/images/icons/gambling-small-disable.png) top left no-repeat;}
+#wrchoverdiv #wrcicon_gambling.selected{background:url(chrome-extension://icmlaeflemplmjndnaapfdbbnpncnbda/skin/images/icons/gambling-small-selected.png) top left no-repeat;}
+#wrchoverdiv #wrcicon_drugs{background:url(chrome-extension://icmlaeflemplmjndnaapfdbbnpncnbda/skin/images/icons/drugs-small-disable.png) top left no-repeat;}
+#wrchoverdiv #wrcicon_drugs.selected{background:url(chrome-extension://icmlaeflemplmjndnaapfdbbnpncnbda/skin/images/icons/drugs-small-selected.png) top left no-repeat;}
+#wrchoverdiv #wrcicon_illegal{background:url(chrome-extension://icmlaeflemplmjndnaapfdbbnpncnbda/skin/images/icons/illegal-small-disable.png) top left no-repeat;}
+#wrchoverdiv #wrcicon_illegal.selected{background:url(chrome-extension://icmlaeflemplmjndnaapfdbbnpncnbda/skin/images/icons/illegal-small-selected.png) top left no-repeat;}
+</style></head>
+<body>
+
+   
+    <div class="MetricsContainer">
+    
+    <div class="WebtrendsContainer">
+      
+
+<script type="text/javascript" async="" src="./Reading Attributes with XmlReader_files/ms2.js"></script><script type="text/javascript" language="javascript">
+//<![CDATA[
+  var literalNormalizedUrl = '/en-us/library/aa720456(d=lightweight,l=en-us,v=vs.71).aspx';
+  var wt_nvr_ru = 'WT_NVR_RU';
+  var wt_fpcdom = '.microsoft.com';
+  var wt_domlist = 'msdn.microsoft.com';
+  var wt_pathlist = '';
+  var wt_paramlist = 'DCSext.mtps_devcenter';
+  var wt_siteid = 'MSDN';
+  var gDomain = 'm.webtrends.com';
+  var gDcsId = 'dcsmgru7m99k7mqmgrhudo0k8_8c6m';
+  var gFpc = 'WT_FPC';
+  if (document.cookie.indexOf(gFpc + "=") == -1) {
+    document.write("<scr" + "ipt type='text/javascript' src='" + "http" + (window.location.protocol.indexOf('https:') == 0 ? 's' : '') + "://" + gDomain + "/" + gDcsId + "/wtid.js" + "'><\\/scr" + "ipt>");
+  }
+  var detectedLocale = 'en-us';
+  var wtsp = 'msdnlib_dotnet';
+  var gTrackEvents = '0';
+/*]]>*/
+</script>
+<noscript>&lt;div&gt;&lt;img alt="DCSIMG" id="Img1" width="1" height="1" src="http://m.webtrends.com/dcsmgru7m99k7mqmgrhudo0k8_8c6m/njs.gif?dcsuri=/nojavascript&amp;amp;WT.js=No" /&gt;&lt;/div&gt;</noscript>
+
+
+    </div>
+    
+    <div class="OmnitureContainer">
+      
+
+
+
+<script type="text/javascript">
+  var omni_guid = 'bcfc6ed8-3862-46c6-9def-190b299a4e60'; 
+</script>
+
+
+
+<noscript>
+    &lt;a href="http://www.omniture.com" title="Web Analytics"&gt;
+        &lt;img src="//msstonojsmsdn.112.2o7.net/b/ss/msstonojsmsdn/1/H.20.2--NS/0" height="1" width="1" border="0" alt="" /&gt;&lt;/a&gt;
+</noscript>
+
+
+    </div>
+    
+  
+</div>
+  <script language="javascript" type="text/javascript" src="./Reading Attributes with XmlReader_files/broker.js"></script>
+
+
+  <div class="header">
+    
+
+<table border="0" cellpadding="0" cellspacing="0" class="headerBar cl_lightweight_topnav_slice">
+		<tbody><tr>
+			<td class="leftSection cl_lightweight_header_leftSection_wave leftSectionImageClusterOverride">
+        <div class="tabContainer">
+          <a href="http://msdn.microsoft.com/en-us/default.aspx" title="Home" class=" headerTab">Home</a>
+          <a href="http://msdn.microsoft.com/en-us/library/default.aspx" title="Library" class="headerTabSelected cl_lightweight_selected_tab_repeatX ">Library</a>
+          <a href="http://msdn.microsoft.com/en-us/bb188199.aspx" title="Learn" class=" headerTab">Learn</a>
+          <a href="http://msdn.microsoft.com/en-us/aa570309.aspx" title="Downloads" class=" headerTab">Downloads</a>
+          <a href="http://msdn.microsoft.com/en-us/hh361695.aspx" title="Support" class=" headerTab">Support</a>
+          <a href="http://msdn.microsoft.com/en-us/aa497440.aspx" title="Community" class=" headerTab">Community</a>
+          
+        </div>
+      </td>
+			<td class="rightSection cl_lightweight_header_rightSection_wave rightSectionImageClusterOverride">
+        <div class="tabContainer">
+            
+            <a href="https://login.live.com/login.srf?wa=wsignin1.0&rpsnv=11&ct=1332082379&rver=6.0.5276.0&wp=MCLBI&wlcxt=msdn%24msdn%24msdn&wreply=http%3a%2f%2fmsdn.microsoft.com%2fen-us%2flibrary%2faa720456%2528v%3dvs.71%2529.aspx&lc=1033&id=254354&mkt=en-US" title="Sign in" rel="nofollow">Sign in </a>
+            <span class="pipe">|</span>
+            <a href="http://msdn.microsoft.com/en-us/library/preferences/locale/?returnurl=%252fen-us%252flibrary%252faa720456(v%253dvs.71).aspx" title="Россия - Pусский" rel="nofollow">Россия - Pусский </a>
+            <span class="pipe">|</span>
+            <a class="dispinline clip15x15" href="http://msdn.microsoft.com/en-us/library/preferences/experience/?returnurl=%252fen-us%252flibrary%252faa720456(v%253dvs.71).aspx" title="Preferences" rel="nofollow"><img class="head_gear" src="./Reading Attributes with XmlReader_files/c764fa3d6b8a84bd40aa131355215c98.png" alt=""></a>
+            <span class="pipe">|</span>
+            <a id="exportPrintLink" class="dispinline clip30x15 moveToDown" href="http://msdn.microsoft.com/en-us/library/aa720456(d=printer,v=vs.71).aspx" title="Print/Export"><img class="head_print_noarrow" src="./Reading Attributes with XmlReader_files/c764fa3d6b8a84bd40aa131355215c98.png" alt=""></a>
+            
+            <div id="exportPrintLinkArrowDiv" class="exportPrintLinkArrow">
+            <a id="exportPrintLinkArrow" class="dispinline clip30x15 moveToDown" href="javascript:void(0);" title="Print/Export"><img class="head_print_arrow" src="./Reading Attributes with XmlReader_files/c764fa3d6b8a84bd40aa131355215c98.png" alt=""></a>
+            </div>
+            
+        </div>
+			</td>
+	</tr>
+</tbody></table>
+
+  </div>
+  <div class="contentPlaceHolder">
+    
+    
+  <div class="navigation" id="Navigation" style="width:280px;padding-bottom:96px;">
+    <div class="searchcontainer">
+      
+<form id="SearchForm" action="http://social.msdn.microsoft.com/search/en-us" method="get" style="margin: 0; padding: 0;" onsubmit="return checkSearchBox()">
+<div class="searchBoxContainer" style="">
+  <table class="searchBox" cellpadding="0" cellspacing="0" border="0">
+    <tbody><tr>
+      <td class="searchTextBoxTd">
+        <input id="SearchInput" type="text" maxlength="200" class="searchTextBox" name="query">
+        
+      </td>
+      <td class="searchButtonTd">
+          <input type="image" src="./Reading Attributes with XmlReader_files/0d0542f5f45cf9fc7273abd11cf5c0ee.gif" style="position: relative;" title="Search ">
+      </td>
+    </tr>
+  </tbody></table>
+</div>
+</form>
+<script type="text/javascript">
+//<![CDATA[
+    if (!MTPS) var MTPS = {};
+    if (!MTPS.Watermarks) MTPS.Watermarks = {};
+    MTPS.Watermarks.SearchInput = {
+        "control": "SearchInput",
+        "defaultValue": "Search MSDN with Bing",
+        "defaultCSS": "searchTextBox",
+        "focusCSS": "searchTextBoxTrue"
+    };
+    function checkSearchBox() {
+        if (document.getElementById("SearchInput").value == MTPS.Watermarks.SearchInput.defaultValue) {
+            document.getElementById("SearchInput").value = "";
+        }
+    }
+ //]]>
+</script>
+
+
+    </div>
+    <div class="navcontainer">
+      
+<div class="nav">
+    
+    <div id="tocnav">
+        
+        <div class="toclevel0 ancestry">
+            
+            <div class="clip5x9 nav_root">
+                <img src="./Reading Attributes with XmlReader_files/c764fa3d6b8a84bd40aa131355215c98.png" class="cl_nav_bullet" alt="">
+            </div>
+            
+            <div class="nav_div_currentroot">
+                <a data-tochassubtree="true" href="http://msdn.microsoft.com/en-us/library/ms123401.aspx" id="ms310241_MSDN.10_en-us" title="MSDN Library">MSDN Library</a>
+            </div>
+            
+            <div class="clip5x9 nav_arrows">
+                <img src="./Reading Attributes with XmlReader_files/c764fa3d6b8a84bd40aa131355215c98.png" class="cl_nav_arrow" alt="">
+            </div>
+            
+            <div class="nav_div_currentroot">
+                <a data-tochassubtree="true" href="http://msdn.microsoft.com/en-us/library/ff361664(v=vs.110).aspx" id="aa139615_MSDN.10_en-us" title=".NET Development">.NET Development</a>
+            </div>
+            
+            <div class="clip5x9 nav_arrows">
+                <img src="./Reading Attributes with XmlReader_files/c764fa3d6b8a84bd40aa131355215c98.png" class="cl_nav_arrow" alt="">
+            </div>
+            
+            <div class="nav_div_currentroot">
+                <a data-tochassubtree="true" href="http://msdn.microsoft.com/en-us/library/aa338211.aspx" id="aa338211_MSDN.10_en-us" title=".NET Framework 1.1">.NET Framework 1.1</a>
+            </div>
+            
+            <div class="clip5x9 nav_arrows">
+                <img src="./Reading Attributes with XmlReader_files/c764fa3d6b8a84bd40aa131355215c98.png" class="cl_nav_arrow" alt="">
+            </div>
+            
+            <div class="nav_div_currentroot">
+                <a data-tochassubtree="true" href="http://msdn.microsoft.com/en-us/library/aa308416(v=vs.71).aspx" id="aa308416_VS.71_en-us" title=".NET Framework">.NET Framework</a>
+            </div>
+            
+            <div class="clip5x9 nav_arrows">
+                <img src="./Reading Attributes with XmlReader_files/c764fa3d6b8a84bd40aa131355215c98.png" class="cl_nav_arrow" alt="">
+            </div>
+            
+            <div class="nav_div_currentroot">
+                <a data-tochassubtree="true" href="http://msdn.microsoft.com/en-us/library/aa720433(v=vs.71).aspx" id="aa308497_VS.71_en-us" title="Programming with the .NET Framework">Programming with the .NET Framework</a>
+            </div>
+            
+            <div class="clip5x9 nav_arrows">
+                <img src="./Reading Attributes with XmlReader_files/c764fa3d6b8a84bd40aa131355215c98.png" class="cl_nav_arrow" alt="">
+            </div>
+            
+            <div class="nav_div_currentroot">
+                <a data-tochassubtree="true" href="http://msdn.microsoft.com/en-us/library/2bcctyt8(v=vs.71).aspx" id="aa308593_VS.71_en-us" title="Employing XML in the .NET Framework">Employing XML in the .NET Framework</a>
+            </div>
+            
+            <div class="clip13x9 nav_arrows">
+                <img src="./Reading Attributes with XmlReader_files/c764fa3d6b8a84bd40aa131355215c98.png" class="cl_nav_dots" alt="">
+            </div>
+            
+            <div class="nav_div_currentroot">
+                <a data-tochassubtree="true" href="http://msdn.microsoft.com/en-us/library/aa720470(v=vs.71).aspx" id="aa308602_VS.71_en-us" title="Reading XML with the XmlReader">Reading XML with the XmlReader</a>
+            </div>
+            
+        </div>
+        
+        <div class="toclevel1 children" style="border-bottom: 1px solid #bbbbbb;">
+            
+                <div class="clip13x9 nav_dots_current">
+                    <img src="./Reading Attributes with XmlReader_files/c764fa3d6b8a84bd40aa131355215c98.png" class="cl_nav_dots" alt="">
+                </div>
+                
+                <div>
+                    <a href="http://msdn.microsoft.com/en-us/library/8kch7s8x(v=vs.71).aspx" title="Current Node Position in XmlReader">Current Node Position in XmlReader</a>
+                </div>
+                
+                <div class="clip13x9 nav_dots_current">
+                    <img src="./Reading Attributes with XmlReader_files/c764fa3d6b8a84bd40aa131355215c98.png" class="cl_nav_dots" alt="">
+                </div>
+                
+                <div>
+                    <a href="http://msdn.microsoft.com/en-us/library/5h71b9ss(v=vs.71).aspx" title="Property Settings on XmlReader">Property Settings on XmlReader</a>
+                </div>
+                
+                <div class="clip13x9 nav_dots_current">
+                    <img src="./Reading Attributes with XmlReader_files/c764fa3d6b8a84bd40aa131355215c98.png" class="cl_nav_dots" alt="">
+                </div>
+                
+                <div>
+                    <a href="http://msdn.microsoft.com/en-us/library/aa720458(v=vs.71).aspx" title="Reading Element and Attribute Content">Reading Element and Attribute Content</a>
+                </div>
+                
+                <div class="clip13x9 nav_dots_current">
+                    <img src="./Reading Attributes with XmlReader_files/c764fa3d6b8a84bd40aa131355215c98.png" class="cl_nav_dots" alt="">
+                </div>
+                
+                <div class="toclevel1 current">
+                    <a href="./Reading Attributes with XmlReader_files/Reading Attributes with XmlReader.htm" title="Reading Attributes with XmlReader">Reading Attributes with XmlReader</a>
+                </div>
+                
+                <div class="clip13x9 nav_dots_current">
+                    <img src="./Reading Attributes with XmlReader_files/c764fa3d6b8a84bd40aa131355215c98.png" class="cl_nav_dots" alt="">
+                </div>
+                
+                <div>
+                    <a href="http://msdn.microsoft.com/en-us/library/aa720634(v=vs.71).aspx" title="Skipping Content with XmlReader">Skipping Content with XmlReader</a>
+                </div>
+                
+                <div class="clip13x9 nav_dots_current">
+                    <img src="./Reading Attributes with XmlReader_files/c764fa3d6b8a84bd40aa131355215c98.png" class="cl_nav_dots" alt="">
+                </div>
+                
+                <div>
+                    <a href="http://msdn.microsoft.com/en-us/library/a4f0e433(v=vs.71).aspx" title="EntityReference Reading and Expansion">EntityReference Reading and Expansion</a>
+                </div>
+                
+                <div class="clip13x9 nav_dots_current">
+                    <img src="./Reading Attributes with XmlReader_files/c764fa3d6b8a84bd40aa131355215c98.png" class="cl_nav_dots" alt="">
+                </div>
+                
+                <div>
+                    <a data-tochassubtree="true" href="http://msdn.microsoft.com/en-us/library/tfz3cz6w(v=vs.71).aspx" id="aa308603_VS.71_en-us" title="Reading XML Data with XmlTextReader">Reading XML Data with XmlTextReader</a>
+                </div>
+                
+                <div class="clip13x9 nav_dots_current">
+                    <img src="./Reading Attributes with XmlReader_files/c764fa3d6b8a84bd40aa131355215c98.png" class="cl_nav_dots" alt="">
+                </div>
+                
+                <div>
+                    <a href="http://msdn.microsoft.com/en-us/library/443c16cf(v=vs.71).aspx" title="Reading Node Trees with XmlNodeReader">Reading Node Trees with XmlNodeReader</a>
+                </div>
+                
+                <div class="clip13x9 nav_dots_current">
+                    <img src="./Reading Attributes with XmlReader_files/c764fa3d6b8a84bd40aa131355215c98.png" class="cl_nav_dots" alt="">
+                </div>
+                
+                <div>
+                    <a href="http://msdn.microsoft.com/en-us/library/aa310910(v=vs.71).aspx" title="Validating XML with XmlValidatingReader">Validating XML with XmlValidatingReader</a>
+                </div>
+                
+                <div class="clip13x9 nav_dots_current">
+                    <img src="./Reading Attributes with XmlReader_files/c764fa3d6b8a84bd40aa131355215c98.png" class="cl_nav_dots" alt="">
+                </div>
+                
+                <div>
+                    <a href="http://msdn.microsoft.com/en-us/library/hbfeb09f(v=vs.71).aspx" title="Object Comparison Using XmlNameTable with XmlReader">Object Comparison Using XmlNameTable with XmlReader</a>
+                </div>
+                
+                <div class="clip13x9 nav_dots_current">
+                    <img src="./Reading Attributes with XmlReader_files/c764fa3d6b8a84bd40aa131355215c98.png" class="cl_nav_dots" alt="">
+                </div>
+                
+                <div>
+                    <a href="http://msdn.microsoft.com/en-us/library/t2abc1zd(v=vs.71).aspx" title="Customized XML Reader Creation">Customized XML Reader Creation</a>
+                </div>
+                
+                <div class="clip13x9 nav_dots_current">
+                    <img src="./Reading Attributes with XmlReader_files/c764fa3d6b8a84bd40aa131355215c98.png" class="cl_nav_dots" alt="">
+                </div>
+                
+                <div>
+                    <a href="http://msdn.microsoft.com/en-us/library/sbw89de7(v=vs.71).aspx" title="Comparing XmlReader to SAX Reader">Comparing XmlReader to SAX Reader</a>
+                </div>
+                
+        </div>
+        
+    </div>
+    <img src="./Reading Attributes with XmlReader_files/030c41d9079671d09a62d8e2c1db6973.gif" alt="Separator" class="communityContentNavigationSeparator cl_lt_cc_line_top">
+    
+</div>
+
+<script type="text/javascript"> 
+  //<![CDATA[
+  if (!MTPS) var MTPS = {};
+  MTPS.TopicNodes= {
+  
+            "_last": ''
+    };
+  //]]>
+</script>
+
+    </div>
+    
+  </div>
+  <div id="tocResizeContainer" style="visibility: visible; ">
+  <a href="javascript:void(0)" class="tocResize" id="TocResize" style="left:280px">
+    <img id="ResizeImageIncrease" class="cl_nav_resize_open" src="./Reading Attributes with XmlReader_files/c764fa3d6b8a84bd40aa131355215c98.png" title="Expand" alt="Expand">
+      <img id="ResizeImageReset" class="cl_nav_resize_close" src="./Reading Attributes with XmlReader_files/c764fa3d6b8a84bd40aa131355215c98.png" style="display:none" title="Minimize" alt="Minimize">
+  </a>
+  </div>
+  <div class="content">
+    
+    
+
+<div class="clip117x31 logo">
+  <a href="http://msdn.microsoft.com/en-us/default.aspx">
+    <img src="./Reading Attributes with XmlReader_files/c764fa3d6b8a84bd40aa131355215c98.png" class="msdn_body_logo" alt="MSDN" title="MSDN">
+  </a>
+</div>
+
+    <div class="topicContainer">
+        
+            <div id="FeedbackCounterContainer">
+                
+
+
+
+
+
+
+            </div>
+        <div class="topic" xmlns:mtps="http://msdn2.microsoft.com/mtps" xmlns="http://www.w3.org/1999/xhtml">
+  <h1 class="title">Reading Attributes with XmlReader</h1><div id="ratingCounter">
+    <span id="rcA" class="ratingText">
+        This topic has not yet been rated <a id="rateThisTopic" href="http://msdn.microsoft.com/en-us/library/aa720456(v=vs.71).aspx#feedback" title="Rate this topic">Rate this topic</a>
+        
+    </span>
+</div><div style="clear: both; "></div>
+  <div class="lw_vs">
+    <div id="curversion">
+      <strong>
+            .NET Framework 1.1</strong>
+    </div>
+  </div>
+  <div style="clear:both;"></div>
+  
+  <a name="cpconreadingattributeswithxmlreader">
+    
+  </a>  <div id="nstext" valign="bottom">  <p>Attributes are allowed on three node types:
+
+</p><ul type="disc"> <li><b>Element</b></li> <li><b>XmlDeclaration</b></li> <li><b>DocumentType</b> Declaration</li> </ul> <p>For an element, movement through the attributes is different than reading the values of the attributes on an <b>XmlDeclaration</b> or <b>DocumentType</b> Declaration.</p> <h2 class="dtH2">Reading Attributes on Elements</h2> <p>When positioned on an <i>element</i> node, the <b>MoveToAttribute </b>methods allow you to go through the attribute list of the element. After <b>MoveToAttribute</b> has been called, the node properties such as <b>Name</b>, <b>NamespaceURI</b>, <b>Prefix</b>, and so on, reflect the properties of that attribute, not its containing element.</p> <p>An attribute does not always have to be specified on an element. A DTD or schema can define a default value for attributes on elements. For example, if <code class="ce">&lt;!ATTLIST e a CDATA "123"&gt;</code> is in the DTD, the attribute "<code class="ce">a</code>" of element "<code class="ce">e</code>" is assigned the value "123" if the attribute "<code class="ce">a</code>" on the element "<code class="ce">e</code>" is not defined in the XML document. When using methods that move among attributes, attributes that receive value from a DTD or schema are acted upon just like attributes that are given a value in the XML stream. There is a programmatic way of determining how the attribute received its value, and that is by using the <b>IsDefault</b> property. The <b>IsDefault</b> property returns <b>true</b> if the current node is an attribute, and the attribute was not specified in the XML stream but instead came from the default attribute declaration in the DTD.</p> <blockquote class="dtBlock"> <b class="le">Note</b>&nbsp;&nbsp;&nbsp;Depending on the type of reader being used, this property does not always apply.</blockquote> <p>The following table shows what values the <b>IsDefault</b> property can return.</p> <div class="tablediv"><table class="dtTABLE"> <tbody><tr valign="top"> <th width="50%">XmlReader implementation</th> <th width="50%">Values returned</th> </tr> <tr valign="top"> <td width="50%"><b>XmlTextReader</b></td> <td width="50%"><b>false</b> because no DTD information is present.</td> </tr> <tr valign="top"> <td width="50%"><b>XmlValidatingReader</b></td> <td width="50%"><b>true</b> if the current node is an attribute whose value was generated from the default value that is defined in the DTD or schema. <b>false</b> if the value of the attribute was explicitly specified in the XML stream.</td> </tr> <tr valign="top"> <td width="50%"><b>XmlNodeReader</b></td> <td width="50%"><b>true</b> if the DTD is defined in <b>XmlDocument</b>, <b>false</b> otherwise.</td> </tr> <tr valign="top"> <td width="50%"><b>XsltReader</b></td> <td width="50%"><b>false</b> because no DTD information (DOCTYPE nodes) is exposed in the XPath data model.</td> </tr> </tbody></table></div> <p>When positioned on an attribute, the <b>GetAttribute</b> method is used to retrieve the value of the attribute.</p> <h2 class="dtH2">Attributes on Other Node Types</h2> <p>The <b>XmlTextReader</b> and <b>XmlValidatingReader</b> expose attributes only on <b>Element</b>, <b>XmlDeclaration</b>, and <b>DocumentType</b> nodes. When implementing <b>XmlReader</b> classes, for the <b>XmlDeclaration</b> node type, the <b>Version</b>, the <b>Standalone</b>, and the <b>Encoding </b>properties are returned as a string in the <b>Value</b> property of the <b>XmlDeclaration</b>. The <b>Value</b> property cannot be returned as <b>string.Empty</b>. If it is empty, the <b>XmlDocument</b> DOM class and other classes that may be dependent on this information cannot load from the <b>XmlReader</b>.</p> <h4 class="dtH4">See Also</h4> <p><a href="http://msdn.microsoft.com/en-us/library/9d83k261(v=vs.71).aspx">Reading XML with the XmlReader</a> | <a href="http://msdn.microsoft.com/en-us/library/aa719854(v=vs.71).aspx">Current Node Position in XmlReader</a> | <a href="http://msdn.microsoft.com/en-us/library/aa720439(v=vs.71).aspx">Property Settings on XmlReader</a> | <a href="http://msdn.microsoft.com/en-us/library/aa720352(v=vs.71).aspx">Object Comparison Using XmlNameTable with XmlReader</a> | <a href="http://msdn.microsoft.com/en-us/library/aa720458(v=vs.71).aspx">Reading Element and Attributes Content</a> | <a href="http://msdn.microsoft.com/en-us/library/aa720634(v=vs.71).aspx">Skipping Content with XmlReader</a> | <a href="http://msdn.microsoft.com/en-us/library/aa720036(v=vs.71).aspx">EntityReference Reading and Expansion</a> | <a href="http://msdn.microsoft.com/en-us/library/aa719723(v=vs.71).aspx">Comparing XmlReader to SAX Reader</a> | <a href="http://msdn.microsoft.com/en-us/library/aa720466(v=vs.71).aspx">Reading XML Data with XmlTextReader</a> | <a href="http://msdn.microsoft.com/en-us/library/aa720460(v=vs.71).aspx">Reading Node Trees with XmlNodeReader</a> | <a href="http://msdn.microsoft.com/en-us/library/aa310910(v=vs.71).aspx">Validating XML with XmlValidatingReader</a> | <a href="http://msdn.microsoft.com/en-us/library/t2abc1zd(v=vs.71).aspx">Customized XML Reader Creation</a> | <a href="http://msdn.microsoft.com/en-us/library/system.xml.xmlreader(v=vs.71).aspx">XmlReader Class</a> | <a href="http://msdn.microsoft.com/en-us/library/system.xml.xmlreader_members(v=vs.71).aspx">XmlReader Members</a> | <a href="http://msdn.microsoft.com/en-us/library/system.xml.xmlnodereader(v=vs.71).aspx">XmlNodeReader Class</a> | <a href="http://msdn.microsoft.com/en-us/library/system.xml.xmlnodereader_members(v=vs.71).aspx">XmlNodeReader Members</a> | <a href="http://msdn.microsoft.com/en-us/library/system.xml.xmltextreader(v=vs.71).aspx">XmlTextReader Class</a> | <a href="http://msdn.microsoft.com/en-us/library/system.xml.xmltextreader_members(v=vs.71).aspx">XmlTextReader Members</a> | <a href="http://msdn.microsoft.com/en-us/library/system.xml.xmlvalidatingreader(v=vs.71).aspx">XmlValidatingReader Class</a> | <a href="http://msdn.microsoft.com/en-us/library/system.xml.xmlvalidatingreader_members(v=vs.71).aspx">XmlValidatingReader Members</a></p>  </div> </div>
+
+        
+
+
+
+<div id="contentFeedback">
+    <form method="post" action="http://msdn.microsoft.com/en-us/library/feedback/add/aa720456(v=vs.71).aspx">
+    <div id="contentFeedbackContainer">
+        <div class="FeedbackTitleContainer">
+            <a name="feedback"></a>
+        Did you find this helpful?
+            <input id="rdIsUsefulYes" name="rdIsUseful" type="radio" value="1" onclick="toggleContentFeedback(&#39;Yes&#39;);"><label for="rdIsUsefulYes">Yes</label>
+            <input id="rdIsUsefulNo" name="rdIsUseful" type="radio" value="0" onclick="toggleContentFeedback(&#39;No&#39;);"><label for="rdIsUsefulNo">No</label>
+        
+        </div>
+        
+            <div id="contentFeedbackQAContainer">
+                
+                    <div id="feedbackListNoContainer" class="FeedbackListContainer">
+                        
+                            <div>
+                                <input id="chkbxNo201" name="chkbxNo" type="checkbox" value="201">
+                                <label for="chkbxNo201">Not accurate</label>
+                            </div>
+                        
+                            <div>
+                                <input id="chkbxNo202" name="chkbxNo" type="checkbox" value="202">
+                                <label for="chkbxNo202">Not enough depth</label>
+                            </div>
+                        
+                            <div>
+                                <input id="chkbxNo203" name="chkbxNo" type="checkbox" value="203">
+                                <label for="chkbxNo203">Need more code examples</label>
+                            </div>
+                        
+                    </div>
+                
+                <div class="FeedbackTellUsMoreContainer">
+                    <textarea id="feedbackText" name="feedbackText" class="TellUsMoreTextBoxSearchLoaded" onfocus="WatermarkFocus(this, &#39;Tell us more...&#39;, &#39;TellUsMoreTextBoxSearch&#39;)" onblur="WatermarkBlur(this, &#39;Tell us more...&#39;, &#39;TellUsMoreTextBoxSearchLoaded&#39;)" onkeydown="TextBoxCharactersCounter(this, document.getElementById(&#39;feedbackTextCounter&#39;), 1500)" onkeyup="TextBoxCharactersCounter(this, document.getElementById(&#39;feedbackTextCounter&#39;), 1500)">Tell us more...</textarea>
+                </div>
+                <span class="counter">(<span id="feedbackTextCounter">1500</span> characters remaining)</span>
+                <input type="hidden" id="returnUrl" name="returnUrl" value="http://msdn.microsoft.com/en-us/library/aa720456(v=vs.71).aspx">
+                <input type="submit" id="submit" value="Submit" title="Click to Submit Feedback" onclick="WatermarkOnSubmit(document.getElementById(&#39;feedbackText&#39;), &#39;Tell us more...&#39;, &#39;TellUsMoreTextBoxSearch&#39;)">
+                <div style="clear: both;"></div>
+            </div>  
+        
+    </div>
+    </form>
+</div>
+
+    </div>
+    
+  </div>
+        
+  </div>
+  <div class="footer">
+    
+
+<div id="footer" class="msdn footerContainer cl_footer_slice">
+  <div class="footerLogoContainer">
+    <div class="footerContent">
+    <div class="copyright">
+      © 2012 Microsoft. All rights reserved.</div>
+    <div class="footerLogo cl_footer_logo"></div>
+    <a href="http://msdn.microsoft.com/cc300389.aspx">Terms of Use</a><span class="pipe"> | </span>
+    <a href="http://www.microsoft.com/library/toolbar/3.0/trademarks/en-us.mspx" wrc_done="true">Trademarks</a>&nbsp;<span class="wrc_icon wrc13" rating="{&quot;icon&quot;:&quot;green3-16.png&quot;,&quot;rating&quot;:1,&quot;weight&quot;:3,&quot;flags&quot;:{}}"></span><span class="pipe"> | </span>
+    <a href="http://www.microsoft.com/info/privacy.mspx" wrc_done="true">Privacy Statement</a>&nbsp;<span class="wrc_icon wrc13" rating="{&quot;icon&quot;:&quot;green3-16.png&quot;,&quot;rating&quot;:1,&quot;weight&quot;:3,&quot;flags&quot;:{}}"></span>
+    <span class="pipe">| </span>
+    <span class="FeedbacklinkDisabled" id="FeedbacklinkDisabled">Site Feedback</span>
+    <a id="Feedbacklink" title="Site Feedback" class="FeedbackLink" href="javascript:void(0)" wrc_done="true">
+      Site Feedback
+        <span class="FeedbackButton clip20x21" id="FeedbackButton">
+          <img id="feedBackImg" class="cl_footer_feedback_icon" src="./Reading Attributes with XmlReader_files/c764fa3d6b8a84bd40aa131355215c98.png" alt="Site Feedback">
+        </span>
+      </a>&nbsp;<span class="wrc_icon wrc11" rating="{&quot;icon&quot;:&quot;green1-16.png&quot;,&quot;rating&quot;:1,&quot;weight&quot;:1,&quot;flags&quot;:{}}"></span>
+    
+  <div id="FeedbackContainer" class="FeedbackContainer">
+    <form id="siteFeedbackForm" method="post" action="http://msdn.microsoft.com/en-us/library/feedback/add/aa720456(v=vs.71).aspx">
+    <div class="FeedbackTitleContainer">
+        <div class="FeedbackTitle">
+            Site Feedback</div>
+        <div class="FeedbackCancel">
+            <a href="javascript:;" onclick="document.getElementById(&#39;FeedbackContainer&#39;).style.display = &#39;none&#39;;">x</a>
+            </div>
+    </div>
+    <div class="FeedbackData">
+        <div class="FeedbackInfoText">
+            Tell us about your experience...
+        </div>
+        <div class="QuestionText">
+            Did the page load quickly?
+        </div>
+        <div class="AnswerText">
+            
+            <span>
+                Yes<span>
+                    <input id="searchBox" name="searchBox" type="radio" value="1"></span></span>
+            
+            <span>
+                No<span>
+                    <input id="searchBox" name="searchBox" type="radio" value="0"></span></span>
+            
+        </div>
+        <div class="QuestionText">
+            Do you like the page design?
+        </div>
+        <div class="AnswerText">
+            
+            <span>
+                Yes<span>
+                    <input id="tabbedCode" name="tabbedCode" type="radio" value="1"></span></span>
+            
+            <span>
+                No<span>
+                    <input id="tabbedCode" name="tabbedCode" type="radio" value="0"></span></span>
+            
+        </div>
+        <div class="QuestionText">
+            Tell us more
+        </div>
+        <div class="FeedbackTextAreaContainer">
+            <textarea id="feedbackText" data-maxlength="4000" name="feedbackText" cols="25" rows="5" class="FeedbackTextArea"></textarea>
+            
+            <textarea id="feedbackDescription" name="feedbackDescription" cols="25" rows="10" style="display:none;">Enter description here.</textarea>
+            <input type="hidden" id="feedbackPriority" name="feedbackPriority" value="">
+            <input type="hidden" id="feedbackSourceUrl" name="feedbackSourceUrl" value="">
+            <input type="hidden" id="ClientIP" name="ClientIP" value="">
+            <input type="hidden" id="ClientOS" name="ClientOS" value="">
+            <input type="hidden" id="ClientBrowser" name="ClientBrowser" value="">
+            <input type="hidden" id="ClientTime" name="ClientTime" value="">
+            <input type="hidden" id="ClientTimeZone" name="ClientTimeZone" value="">
+            
+            
+        </div>
+        <div>
+            <input id="siteFeedbackSubmit" type="submit" value="Send" class="FeedbackSubmit" onclick="submitSiteFeedback(&#39;-1&#39;);">
+        </div>
+    </div>
+    <input type="hidden" id="returnUrl" name="returnUrl" value="http://msdn.microsoft.com/en-us/library/aa720456(v=vs.71).aspx">
+    
+    
+    <input type="hidden" id="feedBackVersion" name="feedBackVersion" value="1">
+    
+  </form> 
+</div>
+
+    </div>
+  </div>
+</div>
+
+  </div>
+<!--[CDATA[ Third party scripts and code linked to or referenced from this website are licensed to you by the parties that own such code, not by Microsoft.  See ASP.NET Ajax CDN Terms of Use – http://www.asp.net/ajaxlibrary/CDN.ashx. ]]-->
+<script type="text/javascript" src="./Reading Attributes with XmlReader_files/Combined.js" xmlns="http://www.w3.org/1999/xhtml"></script>
+
+<div id="wrchoverdiv"><div id="wrccontainer"><div id="wrcheader"><div id="wrctitle"> WebRep</div></div><div class="wrchorizontal"></div><div id="wrccurrentvote">Общий рейтинг</div><div class="wrchorizontal"></div><div id="wrcrating"></div><div id="wrcratingtext">У этого сайта нет рейтинга</div><div id="wrcweighttext">(недостаточно голосов)</div><div id="wrcflags"><div id="wrcicon_shopping" class="wrcicon"></div><div id="wrcicon_social" class="wrcicon"></div><div id="wrcicon_news" class="wrcicon"></div><div id="wrcicon_it" class="wrcicon"></div><div id="wrcicon_corporate" class="wrcicon"></div><div id="wrcicon_pornography" class="wrcicon"></div><div id="wrcicon_violence" class="wrcicon"></div><div id="wrcicon_gambling" class="wrcicon"></div><div id="wrcicon_drugs" class="wrcicon"></div><div id="wrcicon_illegal" class="wrcicon"></div></div><div class="wrchorizontal"></div></div></div><script src="./Reading Attributes with XmlReader_files/broker-config.js"></script><div style="display: none; " id="_WEDCSInsertedData"><iframe id="_msnFrame" src="./Reading Attributes with XmlReader_files/Sync.htm" style="z-index:-1;height:1px;width:1px;display:none;visibility:hidden;" onload="javascript:MscomBeacon();"></iframe></div></body></html>

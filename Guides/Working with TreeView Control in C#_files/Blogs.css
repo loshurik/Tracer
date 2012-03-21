@@ -1,0 +1,110 @@
+﻿/** Blogs Related Classes**/
+.BlogBorderGreen
+{
+	border: solid 1px #009900;
+}
+.BlogBorderBlue
+{
+	border: solid 1px #3971AC;
+}
+.BlogBorderTitle
+{
+	background-color:#BBFFBB;
+}
+.BlogBorderGreenTop
+{
+	border: solid 2px #009900;
+	background-color:#BBFFBB;
+}
+.BlogsControlRightBorderStyle
+{
+	border: solid 1px gray;
+	border-collapse: collapse;
+	margin-bottom: 6px;
+}
+.BlogsHeader
+{
+	background-color: #BBFFBB;
+	height: 19px;
+	padding-left: 6px;
+	border-bottom:solid 1px #009900;
+}
+.NormalText
+{
+	font-family:Tahoma;
+	color: #666666;
+	font-size:13px;
+	text-align:justify;
+}
+.BlogsControlRightHeaderBackground
+{
+	border-bottom: solid 1px gray;
+	padding-top: 4px;
+	color: gray;
+	font-weight: bold;
+	background-color: #C0C0C0;
+	height: 24px;
+}
+.BlogsWelcomeHeading
+{
+	color: #006600;
+	font-family:Georgia;
+	font-size:17px;
+	font-weight:bold;	
+}
+.BlogsWelcomeHeadingArticle
+{
+	color: #006600;
+	font-family:Tahoma;
+	font-size:14px;
+	font-weight:bold;
+			
+}
+.BlogsLatestHeading
+{
+	color: #000066;
+	font-family:Georgia;
+	font-size:17px;
+	font-weight:bold;	
+}
+.BlogTitle
+{
+	color: #009900;
+	font-family:Tahoma;
+	font-size:13px;
+	font-weight:bold;
+	text-decoration:none;	
+}
+.BloggerText
+{
+	color: #FF6600;
+	font-family:Tahoma;
+	font-size:13px;
+	font-weight:bold;
+	text-decoration:none;	
+}
+.BlogsControlHeading
+{
+	background-color: #9EBEDE;
+	height: 19px;
+	padding-left: 6px;
+	border-bottom:solid 1px #3971AC;
+}
+
+.BigSteelblueText
+{	
+	color: #3366CC;
+	font-family:Georgia;
+	font-size:16px;
+	font-weight:bold;
+}
+
+.GrayBigBoldText
+{
+	color: Gray;
+	font-weight: bold;
+	font-size:11px;
+	font-family:Tahoma;
+}
+
+/** Ends Here   **/

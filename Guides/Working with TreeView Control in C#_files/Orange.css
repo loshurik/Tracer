@@ -1,0 +1,11 @@
+﻿a.ControlTitleRightBar:active, a.ControlTitleRightBar:visited, a.ControlTitleRightBar:link{text-decoration:none;color:#FF6600;font-weight:bold;vertical-align:middle;padding-left:2px;}
+a.ControlTitleRightBar:hover{color:gray;padding-left:2px;vertical-align:middle;}
+a.ControlTitleMidBar:active, a.ControlTitleMidBar:visited, a.ControlTitleMidBar:link{text-decoration:none;color:#FF6600;font-weight:bold;vertical-align:middle;padding-left:2px;}
+a.ControlTitleMidBar:hover{color:gray;padding-left:2px;vertical-align:middle;}
+.ControlMidHeaderBackground{background-color:#FFC69F;color:#FF6600;border-bottom:solid 1px #FF6600;}
+.ControlMidBorderStyle{border:solid 1px #FF6600;border-collapse:collapse;}
+.ControlRightHeaderBackground{background-color:#FFC69F;color:#FF6600;border-bottom:solid 1px #FF6600;}
+.ControlRightBorderStyle{border:solid 1px #FF6600;border-collapse:collapse;}
+.ArticleIcon{background-image:url(/App_Themes/CSharp/images/ArticleIcons/ArticleIcon_orange.gif);background-repeat:no-repeat;}
+.BulletIcon{background-image:url(/App_Themes/CSharp/images/BulletIcons/bullet_orange.gif);background-repeat:no-repeat;}
+.pagingBackground{width:100%;border-top:solid 1px #FF6600;border-collapse:collapse;}

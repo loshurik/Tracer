@@ -1,0 +1,221 @@
+H1 {MARGIN-BOTTOM: 0px; MARGIN-TOP: 0px;color: #003399; font-weight: normal; FONT-SIZE: 75%; TEXT-DECORATION: none }
+
+.codeShade {padding: 4px;margin-left: 0em;border:#CCCCCC solid 1px;margin-top:0.5em;margin-bottom:0.5em;}
+A {COLOR: #003399; TEXT-DECORATION: none }
+A:hover{text-decoration:underline}
+form {margin: 0;}
+body{
+	width: 100%;
+	FONT-FAMILY: Arial;
+	margin: 3 auto;
+	MARGIN-LEFT: 0px;
+	PADDING-LEFT: 0px; 
+}
+
+
+.leftBarTable{
+   FONT-SIZE: 90%;
+   BACKGROUND-COLOR: #E6E6E6;
+   BORDER-TOP: 1px solid #CCCCCC;
+   BORDER-LEFT: 1px solid #CCCCCC;
+   BORDER-RIGHT: 1px solid #CCCCCC;
+   width:140px;
+}
+.leftLangCell{
+   BORDER-BOTTOM: 1px solid #CCCCCC;
+}
+.leftNewLangCell{
+   BORDER-BOTTOM: 1px solid #CCCCCC;
+   BACKGROUND-COLOR: #FFE6E6;
+}
+
+.leftBarFolderTable{
+   BACKGROUND-COLOR: white;
+   BORDER-TOP: 1px solid #CCCCCC;
+   BORDER-BOTTOM: 1px solid #CCCCCC;
+   FONT-SIZE: 90%;
+}
+.leftNewFolderCell{
+   BACKGROUND-COLOR: #FFE6E6;
+}
+
+.folderGroupTable {
+    MARGIN-BOTTOM: 0px; 
+    BACKGROUND-COLOR: #E6E6E6;
+    BORDER-BOTTOM:#CCCCCC 1px solid;
+    FLOAT: middle; 
+    FONT-SIZE: 95%;
+}
+
+.folderTitleTable {
+    MARGIN-BOTTOM: 0px; 
+    font-weight: bold;    
+    FONT-SIZE: 90%;
+    BORDER-BOTTOM:#CCCCCC 1px solid
+}
+
+.folderTable {
+    FONT-SIZE: 80%;
+}
+
+#fileElementCount{
+    FONT-SIZE: 75%; 
+    BORDER-LEFT:#FFFFFF 5px solid
+}
+
+.articleProductElement {    
+   width:1000px;      
+   margin:10px 10px 10px 10px;
+}
+.articleProductElementTitle{   
+   padding:0px 0px 0px 0px;
+   margin:0px 0px 0px 0px;
+   font-size: 100%;
+   font-weight:bold;
+}
+.articleProductElementParagraph{
+   padding:0px 0px 0px 0px;   
+   margin:0px 0px 10px 0px;
+}
+.articleProductElementTitleImage{
+   float:left;
+   margin:10px 10px 10px 0px;
+}
+.articleProductElementHost{    
+   font-size: 80%;
+   font-weight:normal;
+   margin:0px 0px 0px 0px;    
+   color: #999999;
+}
+.odd{
+    BACKGROUND-COLOR: #E6E6E6;
+    height:40px;
+
+}
+.even{
+    BACKGROUND-COLOR: #FFFFFFF;
+    height:40px;
+}
+.relatedExample{
+    FONT-SIZE: 170%; 
+    BORDER-BOTTOM:#CCCCCC 1px solid;
+}
+
+.screenshotIndexTable {
+    BORDER-COLLAPSE: collapse;
+    BACKGROUND-COLOR: #E6E6E6;
+    BORDER-LEFT:#CCCCCC 1px solid;    
+    BORDER-TOP:#CCCCCC 1px solid;    
+    BORDER-BOTTOM:#CCCCCC 1px solid;
+    BORDER-RIGHT:#CCCCCC 1px solid;   
+    FONT-SIZE: 80%;         
+}
+.screenshotElementTable{
+    BORDER-COLLAPSE: collapse;
+}
+
+.codeTitle{
+    FONT-SIZE: 150%; 
+    BORDER-BOTTOM:#CCCCCC 1px solid;
+}
+
+.tutorialFolderTitle{
+    FONT-SIZE: 110%; 
+    BORDER-BOTTOM:#CCCCCC 1px solid;
+}
+
+.googleBar{
+   BORDER:#CCCCCC 1px solid;
+}   
+
+.tutorialTable{
+   BORDER:#CCCCCC 1px solid;
+   BORDER-COLLAPSE: collapse;
+
+}
+.tutorialTable TD{
+   BORDER:#CCCCCC 1px solid;
+}
+
+.codeResult {
+   width: 800px;
+   BORDER: 5px solid #CCCCCC;
+   color:#FFFFFF; 
+   background-color:#000000;
+   FONT-SIZE: 100%;
+   COLOR: #FFFFFF;
+   Font-family: Courier New
+}
+
+
+.treeTableLeaf {
+    FONT-SIZE: 13px; FONT-FAMILY: verdana,sans-serif; MARGIN: 0px;BORDER: 0px; PADDING:0px;
+}
+
+.treeTableHeader {
+    text-align: left;
+    background: #D4D0C8;
+    FONT-SIZE: 70%;
+    border-BOTTOM: 1px outset #F4F4F4;
+    border-RIGHT: 1px outset #F4F4F4;
+    border-LEFT: 1px outset #C0C0C0;
+    border-TOP: 1px outset #C0C0C0;
+}
+.treeTableTree{
+   height:13px;
+   width: 200px;
+   FONT-SIZE: 75%;
+}
+
+.diagramCellClass{
+   height:15px;
+   width: 500px;
+   background: #F7E6FF;
+   FONT-SIZE: 75%;
+   font-family: Courier New, monospace;
+   BORDER: 1px solid #660099;
+   margin: 2px;
+}
+
+.diagramCellInterface{
+   height:15px;
+   width: 500px;
+   background: #FFF5E6;
+   FONT-SIZE: 75%;
+   font-family: Courier New, monospace;
+   BORDER: 1px solid #FF9900;
+   margin: 2px;
+}
+
+
+.tabContent {
+BORDER-RIGHT: 1px solid #bbbbbb;
+BORDER-LEFT: 1px solid #bbbbbb;
+BORDER-BOTTOM: 1px solid #bbbbbb;
+}
+
+.tabHeader {
+text-align:center;
+font-size: 80%;
+BORDER: 1px solid #bbbbbb;
+Background: #E6E6E6;
+}
+
+.tabHeaderCurrent {
+text-align:center;
+font-size: 80%;
+BORDER-TOP: 1px solid #bbbbbb;
+BORDER-RIGHT: 1px solid #bbbbbb;
+BORDER-LEFT: 1px solid #bbbbbb;
+}
+
+.tabHeaderLast {
+BORDER-BOTTOM: 1px solid #bbbbbb;
+Background: white;
+}
+
+.tabHeaderDivider{
+
+BORDER-BOTTOM: 1px solid #bbbbbb;
+Background: white;
+}
